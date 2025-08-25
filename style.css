@@ -2,11 +2,15 @@
 body {
   background-image: url('img/aa.jpeg'); /* الصورة بتاعتك */
   background-size: cover;       /* تغطي كل الشاشة */
-  background-repeat: no-repeat; /* ماتتكررش الصورة */
+
   background-position: center;  /* تكون في النص */
   min-height: 100vh;            /* على الأقل طول الشاشة كله */
   margin: 0;                     /* تمنع أي مسافات افتراضية */
   padding: 0;
+    background: url("img/zz.jpeg") repeat;
+  background-size: auto; /* أو cover لو عايزها تتمدد */
+  
+  
 }
 
 
@@ -439,6 +443,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
