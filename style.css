@@ -314,15 +314,23 @@ nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
 .levels-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 مستويات ثابتة في السطر */
-  gap: 2px;
+  gap: 2px;                               /* المسافة بين الدوائر */
   justify-items: center;
   margin-top: 30px;
 }
-
-
 
 .level-circle {
   width: 30px;
@@ -338,6 +346,35 @@ nav ul li a:hover {
   text-decoration: none;
   transition: 0.3s;
 }
+
+/* تعديل الموبايل */
+@media (max-width: 480px) {
+  .level-circle {
+    width: 18vw;       /* كل دائرة تاخد 18% من عرض الشاشة */
+    height: 18vw;
+    font-size: 14px;   /* حجم الخط أصغر */
+  }
+  .levels-container {
+    gap: 2px;          /* مسافة صغيرة بين الدوائر */
+    margin-top: 20px;  /* ممكن تقلل لو عايز قريب من فوق */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .level-circle:hover {
   transform: scale(1.2);
@@ -400,6 +437,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
