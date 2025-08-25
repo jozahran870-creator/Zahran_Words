@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستوى 1 - كلمات زهران</title>
+
+  <!-- ربط ملفات التنسيق والسكريبت -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<!-- مهم: لازم تحط الكلاس level-page عشان السكريبت يعرف يولد الشبكة -->
+<body class="level-page">
+
+  <!-- الهيدر -->
+  <header class="topbar">
+    <nav class="main-nav">
+      <ul>
+        <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li><a class="nav-link" href="about.html">عنا</a></li>
+        <li><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <div class="brand glow-title">يوسف زهران</div>
+  </header>
+
+<div id="win-message" style="display:none; text-align:center;">
+  <p>مبروك خلصت المستوى !</p>
+  <button class="main-btn" id="finishBtn">تم</button>
+</div>
+
+<script>
+  function showWin(levelNum) {
+    document.getElementById("win-message").style.display = "block";
+
+    const finishBtn = document.getElementById("finishBtn");
+    finishBtn.onclick = () => {
+      // نخزن المستوى كمنتهي
+      localStorage.setItem("level-" + levelNum, "done");
+      // نرجع على صفحة المستويات
+      window.location.href = "levels.html";
+    };
+  }
+
+  // مثال استدعاء لما الجيم يخلص، لو المستوى رقم 1:
+  // showWin(1);
+</script>
+
+  <!-- محتوى المستوى -->
+  <main class="level-wrap">
+
+    <!-- زر الرجوع -->
+    <button class="back-fab" aria-label="رجوع" onclick="history.back()">➤</button>
+
+    <!-- عنوان المستوى -->
+    <h1 class="page-title">المستوى 1</h1>
+
+    <!-- صورة اللغز -->
+    <div class="puzzle-holder">
+      <img src="img/a1.jpeg" alt="لغز المستوى 1">
+    </div>
+
+    <!-- الشبكة (الـ JS هيولد الأزرار جوه هنا) -->
+    <section id="grid" class="grid" aria-label="شبكة الحروف 8x8"></section>
+
+  </main>
+
+</body>
+</html>
