@@ -1307,6 +1307,7 @@ function clearSelection(grid){
     c.classList.remove('selected');
     c.dataset.sel = '';
     c.dataset.step = 0;
+    c.style.opacity = "1";
     COLOR_CLASSES.forEach(cl=>c.classList.remove(cl));
   });
 }
@@ -1316,6 +1317,7 @@ function lockSelected(grid){
     c.classList.add('locked');
     c.disabled = true;
     c.setAttribute('aria-pressed','false');
+    c.style.opacity = "1";
   });
 }
 
@@ -1500,6 +1502,7 @@ function initLevels() {
     container.appendChild(a);
   }
 }
+
 
 
 
