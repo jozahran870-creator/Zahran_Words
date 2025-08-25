@@ -324,22 +324,23 @@ nav ul li a:hover {
 
 
 
+
 .levels-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 مستويات ثابتة في السطر */
-  gap: 2px;                               /* المسافة بين الدوائر */
+  grid-template-columns: repeat(5, minmax(40px, 1fr)); /* 5 أعمدة + حجم مرن */
+  gap: 2px;  
   justify-items: center;
   margin-top: 30px;
 }
 
 .level-circle {
-  width: 30px;
-  height: 30px;
+  width: 100%;      /* ياخد عرض العمود بالكامل */
+  aspect-ratio: 1/1; /* يخليها دايرة مظبوطة */
   border-radius: 50%;
-  background: linear-gradient(45deg, red, yellow); /* أحمر × أصفر */
+  background: linear-gradient(45deg, red, yellow);
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,18 +348,18 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
-/* تعديل الموبايل */
-@media (max-width: 480px) {
-  .level-circle {
-    width: 18vw;       /* كل دائرة تاخد 18% من عرض الشاشة */
-    height: 18vw;
-    font-size: 14px;   /* حجم الخط أصغر */
-  }
+/* تعديل للموبايل بشكل مرن */
+@media (max-width: 600px) {  /* 600px مناسب لأغلب الموبايلات المتوسطة */
   .levels-container {
-    gap: 2px;          /* مسافة صغيرة بين الدوائر */
-    margin-top: 20px;  /* ممكن تقلل لو عايز قريب من فوق */
+    grid-template-columns: repeat(5, minmax(30px, 1fr)); /* 5 أعمدة أصغر */
+    gap: 2px;
+    margin-top: 20px;
+  }
+  .level-circle {
+    font-size: 0.8rem;
   }
 }
+
 
 
 
@@ -437,6 +438,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
