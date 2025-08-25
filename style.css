@@ -1,6 +1,6 @@
 /* ---------- أساسيات ---------- */
 body {
-  background-image: url('img/aa.jpg'); /* الصورة بتاعتك */
+  background-image: url('img/aa.jpeg'); /* الصورة بتاعتك */
   background-size: cover;       /* تغطي كل الشاشة */
   background-repeat: no-repeat; /* ماتتكررش الصورة */
   background-position: center;  /* تكون في النص */
@@ -313,3 +313,4 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
