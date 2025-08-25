@@ -271,14 +271,14 @@ nav ul li a:hover {
 .levels-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  gap: 15px;
+  gap: 2px;
   justify-items: center;
   margin-top: 30px;
 }
 
 .level-circle {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: linear-gradient(45deg, red, yellow); /* أحمر × أصفر */
   color: white;
@@ -352,6 +352,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
