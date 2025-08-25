@@ -154,21 +154,34 @@ body.levels-page {
 
 
 
+
+
+
+.cells-container {       /* الحاوية بتاعة الخانات */
+  display: flex;
+  flex-wrap: wrap;       /* لو في أكثر من سطر */
+  justify-content: center; /* تخلي الخانات في نص الصفحة بالعرض */
+  gap: 0;                 /* الخانات لاصقة أفقيًا */
+}
+
 .cell {
   background:#fff; 
   color:#111; 
-  font-weight: 900;   /* تخين كويس بس مش مبالغ */
-  font-size: 28px;    /* أصغر من 40px */
-  border-radius:8px;  /* زوايا أصغر شوية */
-  padding:8px 0;      /* ارتفاع أصغر */
-  width: 50px;        /* لو عايز العرض ثابت */
-  height: 50px;       /* ارتفاع ثابت */
+  font-weight: 900;
+  font-size: 28px;   
+  border-radius:8px;
+  padding:0;             /* نزلنا padding عشان يبقى ارتفاع ثابت */
+  width: 50px;
+  height: 50px;       
   border:none; 
   cursor:pointer; 
   box-shadow: 0 4px 10px rgba(0,0,0,.12);
   transition: transform .06s ease, background .12s ease;
+  margin: 0;             /* يلغى أي مسافة بين الخانات */
+  display: flex;
+  align-items: center;   /* النص في النص رأسيًا */
+  justify-content: center; /* النص في النص أفقيًا */
 }
-
 
 
 
@@ -387,6 +400,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
