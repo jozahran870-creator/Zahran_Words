@@ -9,6 +9,45 @@ body {
   padding: 0;
 }
 
+
+
+
+
+body.level-page {
+  background: url("img/zz.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+body.levels-page {
+  background: url("img/oo.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------- الهيدر ---------- */
 .topbar{
   position:sticky; top:0; z-index:60;
@@ -313,4 +352,5 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
