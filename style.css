@@ -301,15 +301,15 @@ nav ul li a:hover {
 
 
 
-
-
 .levels-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 مستويات ثابتة في السطر */
   gap: 2px;
   justify-items: center;
   margin-top: 30px;
 }
+
+
 
 .level-circle {
   width: 30px;
@@ -387,6 +387,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
