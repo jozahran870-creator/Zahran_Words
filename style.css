@@ -100,12 +100,32 @@ body.levels-page {
 
 /* ---------- صفحة مستوى (شبكة 8x8) ---------- */
 .level-wrap{ max-width:1100px; margin: 10px auto; padding:18px; position:relative }
+
+
+
+
+
+
 .back-fab{
-  position: sticky; top: 88px; inset-inline-start:12px;
-  width:54px; height:54px; border-radius:999px; border:none; cursor:pointer;
-  background:#fff; color:#000; font-size:20px; transform:rotate(180deg);
+  position: absolute; /* بدل sticky */
+  top: 10px;          /* أقرب حاجة لفوق */
+  left: 12px;         /* نفس المسافة من الشمال */
+  width:54px; 
+  height:54px; 
+  border-radius:999px; 
+  border:none; 
+  cursor:pointer;
+  background:#fff; 
+  color:#000; 
+  font-size:20px; 
+  transform:rotate(180deg);
   box-shadow: 0 10px 20px rgba(0,0,0,.14);
+  z-index: 100;       /* فوق كل حاجة */
 }
+
+
+
+
 .puzzle-holder{ display:grid; place-items:center; margin:14px 0 }
 .puzzle-holder img{ width:min(860px,94%); border-radius:14px; box-shadow: 0 10px 24px rgba(0,0,0,0.12); background:rgba(255,255,255,.6) }
 
@@ -264,18 +284,20 @@ nav ul li a:hover {
 
 
 
-.page-title {
-  background: none;     /* مفيش خلفية */
-  color: #FFFFFF;       /* اللون اللي يعجبك */
-  font-size: 36px;      /* حجم الخط */
-  font-weight: bold;    /* تخين */
-  width: auto;          /* العرض على قد الكلام */
-  height: auto;         /* الطول على قد الكلام */
-  margin: 20px auto;    /* تبقى في النص */
-  text-align: center;   /* محاذاة النص في النص */
-  box-shadow: none;     /* مفيش ظل */
-}
 
+.page-title {
+  background: none;
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  margin: 10px auto 20px; /* أقرب حاجة لفوق */
+  text-align: center;
+  box-shadow: none;
+  position: relative;  /* يخليها فوق السطر */
+  z-index: 90;         /* تحت السهم شوية لو عايز */
+}
 
 
 
@@ -365,6 +387,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
