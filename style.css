@@ -251,21 +251,24 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+
+
+
 .page-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, red, yellow); /* أحمر في أصفر */
-  color: #FFFFFF;             /* الخط أبيض */
-  font-size: 36px;
-  font-weight: bold;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  margin: 50px auto;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  background: none;     /* مفيش خلفية */
+  color: #FFFFFF;       /* اللون اللي يعجبك */
+  font-size: 36px;      /* حجم الخط */
+  font-weight: bold;    /* تخين */
+  width: auto;          /* العرض على قد الكلام */
+  height: auto;         /* الطول على قد الكلام */
+  margin: 20px auto;    /* تبقى في النص */
+  text-align: center;   /* محاذاة النص في النص */
+  box-shadow: none;     /* مفيش ظل */
 }
+
+
+
+
 
 
 .levels-container {
@@ -352,6 +355,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
