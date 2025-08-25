@@ -109,7 +109,6 @@ body.levels-page {
 .puzzle-holder{ display:grid; place-items:center; margin:14px 0 }
 .puzzle-holder img{ width:min(860px,94%); border-radius:14px; box-shadow: 0 10px 24px rgba(0,0,0,0.12); background:rgba(255,255,255,.6) }
 
-.grid{ display:grid; grid-template-columns: repeat(8, 1fr); gap:10px; width:min(960px,96%); margin: 10px auto 40px; }
 
 
 
@@ -128,21 +127,32 @@ body.levels-page {
 
 
 
+
+
+
+.grid{ display:grid; grid-template-columns: repeat(8, 1fr); gap:4px; width:min(960px,96%); margin: 10px auto 40px; }
 
 
 
 .cell {
   background:#fff; 
   color:#111; 
-  font-weight: 1500;   /* تخين أوي */
-  font-size: 40px;    /* كبير جدًا */
-  border-radius:10px;
-  padding:20px 0; 
+  font-weight: 900;   /* تخين كويس بس مش مبالغ */
+  font-size: 28px;    /* أصغر من 40px */
+  border-radius:8px;  /* زوايا أصغر شوية */
+  padding:8px 0;      /* ارتفاع أصغر */
+  width: 50px;        /* لو عايز العرض ثابت */
+  height: 50px;       /* ارتفاع ثابت */
   border:none; 
   cursor:pointer; 
-  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
   transition: transform .06s ease, background .12s ease;
 }
+
+
+
+
+
 
 .cell:active { 
   transform: translateY(2px) scale(.99);
@@ -355,6 +365,7 @@ nav ul li a:hover {
   content: " 🔒";
   font-size: 18px;
 }
+
 
 
 
