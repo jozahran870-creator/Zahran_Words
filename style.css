@@ -259,3 +259,57 @@ nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+/* الكونتينر بتاع المستويات */
+.levels-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* الزرار الأساسي للمستويات */
+.level-btn {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* المستويات المفتوحة */
+.level-btn:enabled {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.level-btn:enabled:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #43a047, #388e3c);
+}
+
+/* المستويات المقفولة */
+.level-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  position: relative;
+}
+
+/* شكل القفل */
+.level-btn:disabled::after {
+  content: " 🔒";
+  font-size: 18px;
+}
