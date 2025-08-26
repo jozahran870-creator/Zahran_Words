@@ -1,31 +1,122 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>تواصل معنا - كلمات زهران</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script src="./script.js" defer></script>
-</head>
-<body class="page contact-page">
-  <header class="topbar">
-    <nav class="main-nav">
-      <ul>
-        <li><a class="nav-link" href="./index.html">الرئيسية</a></li>
-        <li><a class="nav-link" href="./about.html">عنا</a></li>
-        <li><a class="nav-link active" href="./contact.html">تواصل معنا</a></li>
-      </ul>
-    </nav>
-    <div class="brand glow-title">يوسف زهران</div>
-  </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا - من سيربح البطيخة</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f6f9fc, #dfffea);
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    header nav a:hover {
+      color: yellow;
+    }
 
-  <main class="page-wrap">
-    <h1 class="page-title">تواصل معنا</h1>
-    <div class="info-box">
-      <p>📞 رقم الهاتف : <b>01091796458</b></p>
-      <p>📧 البريد الإلكتروني : <b>youssefzahran329@gmail.com</b></p>
-    </div>
-  </main>
+    .content-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .content-container h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #4CAF50;
+      outline: none;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    }
+    .contact-form button {
+      background: #4CAF50;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #45a049;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">يوسف زهران</div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن الموقع</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
+</header>
+
+<div class="content-container">
+  <h1>تواصل معنا</h1>
+  <p style="text-align:center;">لو عندك أي أسئلة أو اقتراحات، ابعتلنا على البريد الإلكتروني أو استخدم الفورم ده ⬇️:</p>
+
+  <form action="#" method="post" class="contact-form">
+    <label>الاسم:</label>
+    <input type="text" name="name" required>
+
+    <label>البريد الإلكتروني:</label>
+    <input type="email" name="email" required>
+
+    <label>رسالتك:</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">إرسال</button>
+  </form>
+</div>
 </body>
 </html>
-
