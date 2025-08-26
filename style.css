@@ -2,21 +2,16 @@
 body {
   background-image: url('img/aa.jpeg'); /* الصورة بتاعتك */
   background-size: cover;       /* تغطي كل الشاشة */
+  background-repeat: no-repeat; /* ماتتكررش الصورة */
   background-position: center;  /* تكون في النص */
   min-height: 100vh;            /* على الأقل طول الشاشة كله */
   margin: 0;                     /* تمنع أي مسافات افتراضية */
   padding: 0;
-  
 }
-
-
-
-
-
 body.level-page {
   background: url("img/zz.jpeg") no-repeat center center fixed;
   background-size: cover;
-    
+  
   background-position: center;  /* تكون في النص */
   min-height: 100vh;            /* على الأقل طول الشاشة كله */
   margin: 0;                     /* تمنع أي مسافات افتراضية */
@@ -25,13 +20,11 @@ body.level-page {
   background-size: auto; /* أو cover لو عايزها تتمدد */
   
 }
-
-
-
 body.levels-page {
   background: url("img/oo.jpeg") no-repeat center center fixed;
   background-size: cover;
-    
+  
+  
    background-size: cover;       /* تغطي كل الشاشة */
   background-position: center;  /* تكون في النص */
   min-height: 100vh;            /* على الأقل طول الشاشة كله */
@@ -40,14 +33,6 @@ body.levels-page {
   background: url("img/oo.jpeg") repeat;
   background-size: auto; /* أو cover لو عايزها تتمدد */
 }
-  
-
-
-
-
-
-
-
 /* ---------- الهيدر ---------- */
 .topbar{
   position:sticky; top:0; z-index:60;
@@ -99,13 +84,8 @@ body.levels-page {
 .level-btn:hover{ transform: scale(1.08); box-shadow: 0 12px 28px rgba(0,0,0,0.2) }
 
 /* ---------- صفحة مستوى (شبكة 8x8) ---------- */
+
 .level-wrap{ max-width:1100px; margin: 10px auto; padding:18px; position:relative }
-
-
-
-
-
-
 .back-fab{
   position: absolute; /* بدل sticky */
   top: 10px;          /* أقرب حاجة لفوق */
@@ -122,100 +102,54 @@ body.levels-page {
   box-shadow: 0 10px 20px rgba(0,0,0,.14);
   z-index: 100;       /* فوق كل حاجة */
 }
-
-
-
-
 .puzzle-holder{ display:grid; place-items:center; margin:14px 0 }
-.puzzle-holder img{ width:min(860px,94%); border-radius:14px; box-shadow: 0 10px 24px rgba(0,0,0,0.12); background:rgba(255,255,255,.6) }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.puzzle-holder img {
+  width: 360px;  /* العرض */
+  height: 300px; /* الارتفاع */
+  border-radius: 10px; /* الزوايا */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* الظل */
+  background: rgba(255, 255, 255, 0.6); /* الخلفية */
+}
 .grid{ display:grid; grid-template-columns: repeat(8, 1fr); gap:4px; width:min(960px,96%); margin: 10px auto 40px; }
-
-
 
 
 
 
 .cells-container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* ٨ أعمدة */
-  grid-template-rows: repeat(8, 1fr);    /* ٨ صفوف */
+  grid-template-columns: repeat(5, 80px); /* ٥ أعمدة بعرض ثابت */
+  grid-template-rows: repeat(5, 80px);    /* ٥ صفوف بارتفاع ثابت */
   gap: 8px;                 /* المسافة بين الخانات */
   justify-content: center;  /* يوسّط الشبكة أفقي */
-  margin: 0 auto;           /* يحط الكونتينر في النص */
-  width: 95%;               /* يسيب مسافة صغيرة من الجنب */
-  max-width: 600px;         /* يمنع الشبكة تكبر زيادة */
+  align-content: center;    /* يوسّط الشبكة رأسي */
+  margin: 20px auto;        /* يسيب مسافة من فوق وتحت */
+  width: max-content;       /* يخلي العرض قد الخانات بالظبط */
   box-sizing: border-box;
+  background: #eee;         /* خلفية عشان الخانات البيضا تبان */
+  padding: 12px;
+  border-radius: 12px;
 }
-
-
-
-
-
-
-
-
 
 .cell {
-  background:#fff; 
-  color:#111; 
+  background: #fff; 
+  color: #111; 
   font-weight: 900;
   font-size: 28px;   
-  border-radius:8px;
-  padding:0;             /* نزلنا padding عشان يبقى ارتفاع ثابت */
-  width: 50px;
-  height: 50px;       
-  border:none; 
-  cursor:pointer; 
-  box-shadow: 0 4px 10px rgba(0,0,0,.12);
-  transition: transform .06s ease, background .12s ease;
-  margin: 0;             /* يلغى أي مسافة بين الخانات */
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;         
+  border: none; 
+  cursor: pointer; 
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  transition: transform .08s ease, background .15s ease;
   display: flex;
-  align-items: center;   /* النص في النص رأسيًا */
-  justify-content: center; /* النص في النص أفقيًا */
+  align-items: center;   
+  justify-content: center; 
 }
-
-
-
-
 
 .cell:active { 
-  transform: translateY(2px) scale(.99);
+  transform: translateY(2px) scale(.97);
 }
-
-.cell.selected {
-  background: #ff4444;   /* أحمر جامد */
-  color: #fff;           /* الخط أبيض */
-}
-
-.cell.correct {
-  background: linear-gradient(135deg, #FFD700, #ADD8E6); /* أصفر × لبني */
-  color: #000;   
-  font-weight: 900;   /* يفضل تخين */
-  font-size: 40px;    /* نفس الحجم الكبير */
-}
-
 
 
 /* تأثير قصير عند الضغط */
@@ -245,7 +179,6 @@ body.levels-page {
   transform: scale(1.05); /* الزرار يكبر سنة */
   box-shadow: 0 8px 18px rgba(0,0,0,0.3);
 }
-
 /* التأثير أول ما أضغط على الزرار */
 .main-btn:active {
   transform: scale(0.95); /* الزرار يغرز لتحت */
@@ -265,7 +198,6 @@ body.levels-page {
   animation: glow 2s infinite alternate;
 
 }
-
 @keyframes glow {
   from {
     text-shadow: 
@@ -281,7 +213,6 @@ body.levels-page {
       0 0 100px #FFD700;
   }
 }
-
 #navbar {
   width: 100%;                  /* ياخد كل العرض */
   display: flex;                 /* يخلي العناصر في خط واحد */
@@ -289,8 +220,6 @@ body.levels-page {
   padding: 10px 20px;            /* شوية مسافة من فوق وتحت واليمين والشمال */
   box-sizing: border-box;     /* تمنع أي مشاكل padding */
 } 
-
-
 nav ul {
   list-style: none;
   margin: 0;
@@ -299,18 +228,12 @@ nav ul {
   gap: 25px;
 }
 nav ul li a { color: #FFFFFF; font-weight: bold; text-decoration: none; transition: 0.3s; }
-
 nav ul li a:hover {
   color: #FF0000; /* أحمر عند المرور */
   background-color: white; /* المربع اللي حواليها أبيض */
   padding: 5px 10px;
   border-radius: 5px;
 }
-
-
-
-
-
 .page-title {
   background: none;
   color: #FFFFFF;
@@ -324,19 +247,6 @@ nav ul li a:hover {
   position: relative;  /* يخليها فوق السطر */
   z-index: 90;         /* تحت السهم شوية لو عايز */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -375,92 +285,16 @@ nav ul li a:hover {
     font-size: 0.8rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .level-circle:hover {
   transform: scale(1.2);
   background: linear-gradient(45deg, green, blue); /* أخضر × أزرق عند المرور */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* الكونتينر بتاع المستويات */
-.levels-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
+.cell.selected {
+  background: #ff0000;   /* أحمر */
+  color: #fff;
+  opacity: 1;
 }
-
-/* الزرار الأساسي للمستويات */
-.level-btn {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 15px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-/* المستويات المفتوحة */
-.level-btn:enabled {
-  background: linear-gradient(135deg, #4CAF50, #45a049);
-  color: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-.level-btn:enabled:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #43a047, #388e3c);
-}
-
-/* المستويات المقفولة */
-.level-btn:disabled {
-  background: #ccc;
-  color: #666;
-  cursor: not-allowed;
-  position: relative;
-}
-
-/* شكل القفل */
-.level-btn:disabled::after {
-  content: " 🔒";
-  font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
 
 
 
