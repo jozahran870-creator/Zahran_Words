@@ -130,6 +130,8 @@ body.levels-page {
   border-radius: 12px;
 }
 
+
+
 .cell {
   background: #fff; 
   color: #111; 
@@ -146,6 +148,19 @@ body.levels-page {
   align-items: center;   
   justify-content: center; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cell:active { 
   transform: translateY(2px) scale(.97);
@@ -295,6 +310,7 @@ nav ul li a:hover {
   color: #fff;
   opacity: 1;
 }
+
 
 
 
