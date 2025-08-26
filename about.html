@@ -3,30 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>عنا - كلمات زهران</title>
+  <title>عنّا - كلمات زهران</title>
   <link rel="stylesheet" href="./style.css" />
-  <script src="./script.js" defer></script>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f6f9fc, #e8f7ff);
+      color: #333;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #2c3e50;
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #f1c40f;
+    }
+	
+	
+	.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;          /* اللوجو باللون الأبيض */
+  text-shadow: 0 0 6px #f1c40f;  /* يدي لمعة دهبي */
+}
+
+	
+    .page-wrap {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .page-title {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .page-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #f1c40f;
+      margin: 10px auto 0;
+      border-radius: 4px;
+    }
+    .info-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body class="page about-page">
   <header class="topbar">
     <nav class="main-nav">
       <ul>
-        <li><a class="nav-link" href="./index.html">الرئيسية</a></li>
-        <li><a class="nav-link active" href="./about.html">عنا</a></li>
+        <li><a class="nav-link" href="./index.html">الصفحة الرئيسية</a></li>
+        <li><a class="nav-link active" href="./about.html">عنّا</a></li>
         <li><a class="nav-link" href="./contact.html">تواصل معنا</a></li>
       </ul>
     </nav>
-    <div class="brand glow-title">يوسف زهران</div>
+    <div class="brand">✨ يوسف زهران ✨</div>
   </header>
 
   <main class="page-wrap">
-    <h1 class="page-title">عنا</h1>
+    <h1 class="page-title">من نحن؟</h1>
     <div class="info-box">
-      أهلاً بكم في موقع كلمات زهران .
-	  هذا الموقع أسسه المهندس يوسف محمد زهران الحاصل على جوائز عديدة في مجال البرمجة،
-      لا يهمنا مقدار الخدمة بل جودة الخدمة ، نتمنى لكم الاستمتاع بوقتكم .
+      <p>مرحباً بك في <strong>موقع كلمات زهران</strong> 💡، مساحة خُصصت للإبداع و الأفكار و الكلمات اللي بتوصل القلب.</p>
+      <p>أسس الموقع <strong>يوسف محمد زهران</strong>، مبرمج ومبدع حاصل على جوائز مميزة في مجال البرمجة 🎖️.</p>
+      <p>شعارنا بسيط: <em>"مش بالكثرة.. بالجودة"</em> ✨</p>
+      <p>هدفنا إنك تستمتع وتلاقي قيمة حقيقية في كل كلمة وكل تفصيلة هنا ❤️.</p>
     </div>
   </main>
 </body>
 </html>
-
